@@ -9,6 +9,8 @@ class Calculator{
     updateDisplay(){
         if(this.previousNumber !== ''){
             this.displayContainer.innerText = `${this.previousNumber} ${this.operator} ${this.currentNumber}` ;
+        } else if(this.operator !== undefined){
+            this.displayContainer.innerText = `${this.currentNumber} ${this.operator}`;
         } else {
             this.displayContainer.innerText = this.currentNumber;
         }
@@ -19,8 +21,9 @@ class Calculator{
         } else{
             this.previousNumber = this.currentNumber;
             this.currentNumber = '';
-            this.operator = operator
         }
+        this.operator = operator
+        console.log("operator: " + this.operator);
     }
     compute(){
         let result;
