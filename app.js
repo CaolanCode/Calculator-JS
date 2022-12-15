@@ -1,20 +1,19 @@
 class Calculator{
-    constructor(display){
-        this.display = display;
-        this.displayText = '';
+    constructor(displayContainer){
+        this.displayContainer = displayContainer;
+        this.currentNumber = '';
     }
-
     appendNumber(number){
-        this.displayText = this.displayText.toString() + number.toString();
+       this.currentNumber = this.currentNumber.toString() + number.toString();
     }
     updateDisplay(){
-        this.display.innerText = this.displayText;
+        this.displayContainer.innerText = this.currentNumber;
     }
 }
+const displayContainer = document.getElementById('display');
 const numberButton = document.querySelectorAll('.number');
-const display = document.querySelector('.display');
 
-const calculator = new Calculator(display)
+const calculator = new Calculator(displayContainer);
 
 numberButton.forEach(button => {
     button.addEventListener('click', () => {
