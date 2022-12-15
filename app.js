@@ -1,9 +1,7 @@
 class Calculator{
     constructor(displayContainer){
         this.displayContainer = displayContainer;
-        this.currentNumber = '';
-        this.previousNumber = '';
-        this.operator = undefined;
+        this.clear();
     }
     appendNumber(number){
        this.currentNumber = this.currentNumber.toString() + number.toString();
@@ -51,6 +49,11 @@ class Calculator{
     delete(){
         this.currentNumber = this.currentNumber.toString().slice(0, -1);
     }
+    clear(){
+        this.currentNumber = '';
+        this.previousNumber = '';
+        this.operator = undefined;
+    }
 }
 const displayContainer = document.getElementById('display');
 const numberButton = document.querySelectorAll('.number');
@@ -76,5 +79,10 @@ operatorButton.forEach(button => {
 
 deleteButton.addEventListener('click', () => {
     calculator.delete();
+    calculator.updateDisplay();
+})
+
+allClearButton.addEventListener('click', () => {
+    calculator.clear();
     calculator.updateDisplay();
 })
