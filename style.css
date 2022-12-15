@@ -1,6 +1,5 @@
 *{
     font-family: sans-serif;
-    border: 1px solid black;
 }
 body{
     margin: 0;
@@ -17,6 +16,8 @@ body{
 .container > button{
     font-size: 30px;
     font-weight: 500;
+    border-style: none;
+    border: 1px solid gray;
 }
 .display{
     grid-column: 1/-1;
