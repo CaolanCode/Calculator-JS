@@ -14,9 +14,21 @@ body{
     grid-template-rows: repeat(6, 100px);
     height: 100vh;
 }
+.container > button{
+    font-size: 30px;
+    font-weight: 500;
+}
 .display{
     grid-column: 1/-1;
+    background-color: rgb(102, 98, 98);
 }
 .two-wide{
     grid-column: span 2;
+}
+.operator{
+    background-color: rgba(248, 150, 4, 0.965);
+    color: white;
+}
+#all-clear, #delete{
+    background-color: rgb(212, 201, 201);
 }
