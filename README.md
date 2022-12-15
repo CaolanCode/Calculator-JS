@@ -6,3 +6,8 @@ I based my program on this image
 
 
 ![Basic Calculator OS X](./Images/apple-calculator.png)
+
+
+Final Product:
+
+![Basic Calculator Clone](./Images/basic-calculator.png)
