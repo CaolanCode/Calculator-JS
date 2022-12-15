@@ -1,5 +1,5 @@
 *{
-    font-family: sans-serif;
+    font-family: Helvetica, sans-serif;
 }
 body{
     margin: 0;
@@ -22,6 +22,12 @@ body{
 .display{
     grid-column: 1/-1;
     background-color: rgb(102, 98, 98);
+    color: white;
+    font-size: 40px;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 .two-wide{
     grid-column: span 2;
