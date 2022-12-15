@@ -5,17 +5,17 @@
 body{
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
 }
 .container{
     display: grid;
+    justify-content: center;
+    align-content: center;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: repeat(6, 100px);
     height: 100vh;
 }
 .display{
-    grid-column: span 1/-1;
+    grid-column: 1/-1;
 }
 .two-wide{
     grid-column: span 2;
