@@ -8,7 +8,7 @@ class Calculator{
     }
     updateDisplay(){
         if(this.previousNumber !== ''){
-            this.displayContainer.innerText = `${this.previousNumber} ${this.currentNumber}` ;
+            this.displayContainer.innerText = `${this.previousNumber} ${this.operator} ${this.currentNumber}` ;
         } else {
             this.displayContainer.innerText = this.currentNumber;
         }
@@ -17,8 +17,9 @@ class Calculator{
         if(this.operator !== undefined){
             this.compute();
         } else{
-            this.previousNumber = `${this.currentNumber} ${operator}`;
-            this.operator = '';
+            this.previousNumber = this.currentNumber;
+            this.currentNumber = '';
+            this.operator = operator
         }
     }
     compute(){
@@ -60,6 +61,7 @@ const numberButton = document.querySelectorAll('.number');
 const operatorButton = document.querySelectorAll('.operator');
 const deleteButton = document.getElementById('delete');
 const allClearButton = document.getElementById('all-clear');
+const equals = document.getElementById('equals');
 
 const calculator = new Calculator(displayContainer);
 
@@ -84,5 +86,10 @@ deleteButton.addEventListener('click', () => {
 
 allClearButton.addEventListener('click', () => {
     calculator.clear();
+    calculator.updateDisplay();
+})
+
+equals.addEventListener('click', () => {
+    calculator.compute();
     calculator.updateDisplay();
 })
