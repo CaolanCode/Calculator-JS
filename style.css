@@ -32,7 +32,7 @@ body{
 .two-wide{
     grid-column: span 2;
 }
-.operator{
+.operator, #equals{
     background-color: rgba(248, 150, 4, 0.965);
     color: white;
 }
