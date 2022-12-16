@@ -40,7 +40,11 @@ class Calculator{
         result = prev * current;
         break;
       case '÷':
-        result = prev / current;
+        if(current === 0){
+          result = "ERROR";
+        } else {
+          result = prev / current;
+        }
         break;
       default:
         return;
