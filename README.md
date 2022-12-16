@@ -10,4 +10,4 @@ I based my program on this image
 
 Final Product:
 
-![Basic Calculator Clone](./Images/basic-calculator.png)
+<img src="./Images/basic-calculator.png" alt="Basic Calculator Clone" width="200"/>
