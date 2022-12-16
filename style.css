@@ -29,6 +29,8 @@ body{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 .two-wide{
     grid-column: span 2;
@@ -39,4 +41,10 @@ body{
 }
 #all-clear, #delete{
     background-color: rgb(212, 201, 201);
+}
+.two-wide.number{
+    border-bottom-left-radius: 10px;
+}
+#equals{
+    border-bottom-right-radius: 10px;
 }
