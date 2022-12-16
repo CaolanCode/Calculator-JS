@@ -4,7 +4,11 @@ class Calculator{
     this.clear();
   }
   appendNumber(number){
-    this.currentNumber = this.currentNumber.toString() + number.toString();
+    if(number === '.' && this.currentNumber.includes('.')){
+      return;
+    } else {
+      this.currentNumber = this.currentNumber.toString() + number.toString();
+    }
   }
   updateDisplay(){
     if(this.operator !== undefined){
