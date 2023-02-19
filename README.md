@@ -1,6 +1,5 @@
-# Calculator-JS
+# Calculator
 
-A JavaScript Calculator as described by The Odin Project
 
 [View Calculator](https://caolancode.github.io/Calculator-JS/)
 
